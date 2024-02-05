@@ -10,7 +10,7 @@ return {
 	},
 	{
 		"nyoom-engineering/oxocarbon.nvim",
-		enabled = false,
+		enabled = true,
 		name = "oxocarbon",
 		priority = 1000,
 		config = function()

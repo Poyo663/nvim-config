@@ -15,3 +15,6 @@ vim.keymap.set("n", "<C-b>", "<C-w><C-w>", {})
 vim.keymap.set("n", "<C-m>", "@q", {})
 
 vim.keymap.set("n", "<C-s>", ":vsplit<CR>", {})
+
+vim.keymap.set("n", "W", ":w<CR>", {})
+vim.keymap.set("n", "<LEADER>n", "o<C-c>", {})
