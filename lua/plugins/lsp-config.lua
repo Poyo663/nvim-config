@@ -32,6 +32,7 @@ return {
       lspconfig.tailwindcss.setup({ capabilities = capability })
       lspconfig.rust_analyzer.setup({ capabilities = capability })
       lspconfig.bashls.setup({ capabilities = capability })
+      lspconfig.angularls.setup({ capabilities = capability })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})

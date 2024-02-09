@@ -4,6 +4,7 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.mouse = ""
 vim.g.mapleader = " "
+vim.opt.termguicolors = true
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -18,5 +19,5 @@ vim.keymap.set("n", "<C-s>", ":vsplit<CR>", {})
 
 vim.keymap.set("n", "W", ":w<CR>", {})
 
-vim.keymap.set("n", "<LEADER>n", "o<C-c>", {})
-vim.keymap.set("n", "<LEADER>m", "O<C-c>", {})
+vim.keymap.set("n", "<LEADER>n", "o<C-c>kzz", {})
+vim.keymap.set("n", "<LEADER>m", "O<C-c>jzz", {})
