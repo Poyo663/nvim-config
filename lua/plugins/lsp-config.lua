@@ -1,4 +1,8 @@
 return {
+  --jsx
+  {
+    "neoclide/vim-jsx-improve",
+  },
   {
     "williamboman/mason.nvim",
     config = function()
@@ -25,6 +29,7 @@ return {
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({ capabilities = capability })
       lspconfig.tsserver.setup({ capabilities = capability })
+      lspconfig.eslint.setup({ capabilities = capability })
       lspconfig.clangd.setup({ capabilities = capability })
       lspconfig.ast_grep.setup({ capabilities = capability })
       lspconfig.cssls.setup({ capabilities = capability })
@@ -33,6 +38,14 @@ return {
       lspconfig.rust_analyzer.setup({ capabilities = capability })
       lspconfig.bashls.setup({ capabilities = capability })
       lspconfig.angularls.setup({ capabilities = capability })
+      lspconfig.jdtls.setup({ capabilities = capability })
+      lspconfig.ltex.setup({ capabilities = capability })
+
+      local cap = require("lspconfig").omnisharp.capabilities
+      lspconfig.omnisharp.setup({
+        capabilities = cap,
+        cmd = { "dotnet", vim.fn.stdpath("data") .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },
+      })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
