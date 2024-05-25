@@ -26,3 +26,5 @@ vim.keymap.set("n", "<LEADER>n", "o<C-c>kzz", {})
 vim.keymap.set("n", "<LEADER>m", "O<C-c>jzz", {})
 
 vim.keymap.set("n", "J", "<C-d>", {})
+
+vim.keymap.set("n", "<LEADER>tt", ":split<CR>:terminal<CR>a", {})
